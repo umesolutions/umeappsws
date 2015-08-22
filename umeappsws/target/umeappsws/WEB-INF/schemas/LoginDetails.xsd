@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://login.e2eapp.umesolutions.com"
+	targetNamespace="http://login.e2eapp.umesolutions.com"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="LoginDetails" type="LoginDetails" />
+	<xs:complexType name="LoginDetails">
+		<xs:sequence>
+			<xs:element name="CustomerID" type="xs:string" />
+			<xs:element name="password" type="xs:string" />
+			<xs:element name="passCode" type="xs:string" />
+			<xs:element name="userStatus" type="xs:string" />
+			<xs:element name="created_date" type="xs:string" />
+			<xs:element name="Last_login_date" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://login.e2eapp.umesolutions.com/UserLoginService"
+	xmlns:tns="http://login.e2eapp.umesolutions.com/UserLoginService" xmlns:LoginDetails="http://login.e2eapp.umesolutions.com"
+	elementFormDefault="qualified">
+	<xsd:import namespace="http://login.e2eapp.umesolutions.com"
+		schemaLocation="LoginDetails.xsd" />
+	<xsd:element name="LoginRequest">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="userName" type="xsd:string" />
+				<xsd:element name="password" type="xsd:string" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="LoginResponse">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="loginDetails" type="LoginDetails:LoginDetails" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>    
